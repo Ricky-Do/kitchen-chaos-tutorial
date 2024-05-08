@@ -8,6 +8,8 @@ public class GameInput : MonoBehaviour
 {
 
     public event EventHandler OnInteractAction;
+    public event EventHandler OnInteractAlternateAction;
+
     private PlayerInputActions playerInputActions;
 
     private void Awake(){
@@ -15,9 +17,15 @@ public class GameInput : MonoBehaviour
         playerInputActions.Player.Enable();
 
         playerInputActions.Player.Interact.performed += Interact_performed;
+        playerInputActions.Player.InteractAlternate.performed += InteractAlternate_performed;
     }
 
-    private void Interact_performed(UnityEngine.InputSystem.InputAction.CallbackContext obj){
+    private void InteractAlternate_performed(InputAction.CallbackContext obj)
+    {
+        OnInteractAlternateAction?.Invoke(this, EventArgs.Empty);
+    }
+
+    private void Interact_performed(InputAction.CallbackContext obj){
         //"?.Invoke" means that if OnInteractAction is null, it will not execute code to the right. If not null, it will execute code to the right
         OnInteractAction?.Invoke(this, EventArgs.Empty);
     }
