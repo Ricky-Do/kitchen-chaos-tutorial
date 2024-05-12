@@ -133,6 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 62242208}
   - component: {fileID: 62242209}
+  - component: {fileID: 62242210}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -175,6 +176,18 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   kitchenObjectHoldPoint: {fileID: 311855097}
+--- !u!114 &62242210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62242207}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97eb54308c6131f4796e83bc9a3a80f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &151567080 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1845469082541681710, guid: 4452d5f38c168734baa9e17c60948650,
@@ -1738,6 +1751,51 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 324225423}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &852047339
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 852047341}
+  - component: {fileID: 852047340}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &852047340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852047339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac15fe9188a6ea745af9eeaaec010d68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioClipRefsSO: {fileID: 11400000, guid: c73b6ead6f868414b9ef5b2f6393abe3, type: 2}
+--- !u!4 &852047341
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852047339}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &863521970 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2245881346848610102, guid: 82c10ef02f661aa499424298a7ca3947,
@@ -3499,3 +3557,4 @@ SceneRoots:
   - {fileID: 1528601053}
   - {fileID: 247414107}
   - {fileID: 635925684}
+  - {fileID: 852047341}
